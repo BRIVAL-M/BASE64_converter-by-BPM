@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Pro Encoder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-cyber">
+
+    <!-- Menu des thèmes -->
+    <nav class="theme-menu">
+        <button id="btn-theme-toggle" class="btn-icon theme-menu__toggle" title="Changer de thème">
+            [ THÈMES ]
+        </button>
+        <ul id="theme-dropdown" class="theme-menu__dropdown">
+            <li><button class="theme-menu__btn" data-theme="theme-cyber">Cyberpunk</button></li>
+            <li><button class="theme-menu__btn" data-theme="theme-girly">Girly Kawaii</button></li>
+            <li><button class="theme-menu__btn" data-theme="theme-luxury">Dark Luxury</button></li>
+            <li><button class="theme-menu__btn" data-theme="theme-minimal">Pro Minimal</button></li>
+            <!-- Les 4 nouveaux thèmes -->
+            <li><button class="theme-menu__btn" data-theme="theme-ufo">UFO Alien</button></li>
+            <li><button class="theme-menu__btn" data-theme="theme-retro">Retro Synthwave</button></li>
+            <li><button class="theme-menu__btn" data-theme="theme-matrix">Matrix Hacker</button></li>
+            <li><button class="theme-menu__btn" data-theme="theme-ocean">Deep Ocean</button></li>
+        </ul>
+    </nav>
+
+    <main class="converter">
+        <header class="converter__header">
+            <h1 class="converter__title">SYSTÈME // BASE64</h1>
+            <p class="converter__subtitle">Module de cryptage et décryptage en ligne</p>
+        </header>
+
+        <div class="converter__grid">
+            <!-- Section Entrée -->
+            <section class="panel panel--input">
+                <header class="panel__header panel__header--flex">
+                    <h2 class="panel__title">DONNÉES SOURCE</h2>
+                    <button id="btn-reset-input" class="btn-icon btn-icon--danger" title="Vider l'entrée">[RESET]</button>
+                </header>
+                <div class="panel__body">
+                    <label for="input-data" class="panel__label sr-only">Texte à transformer</label>
+                    <textarea id="input-data" class="panel__textarea" placeholder="Initialisation... Entrez vos données ici."></textarea>
+                </div>
+            </section>
+
+            <!-- Section Contrôles -->
+            <section class="controls">
+                <button id="btn-encode" class="btn btn--primary">
+                    <span class="btn__text">[ENCODER]</span>
+                </button>
+                <button id="btn-decode" class="btn btn--secondary">
+                    <span class="btn__text">[DÉCODER]</span>
+                </button>
+            </section>
+
+            <!-- Section Sortie -->
+            <section class="panel panel--output">
+                <header class="panel__header panel__header--flex">
+                    <h2 class="panel__title">RÉSULTAT</h2>
+                    <div class="panel__actions">
+                        <button id="btn-copy" class="btn-icon" title="Copier dans le presse-papier">[COPIER]</button>
+                        <button id="btn-reset-output" class="btn-icon btn-icon--danger" title="Vider le résultat">[RESET]</button>
+                    </div>
+                </header>
+                <div class="panel__body">
+                    <label for="output-data" class="panel__label sr-only">Résultat de la transformation</label>
+                    <textarea id="output-data" class="panel__textarea panel__textarea--readonly" readonly placeholder="En attente de traitement..."></textarea>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
